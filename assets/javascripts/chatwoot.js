@@ -1,33 +1,32 @@
 // Chatwoot plugin Javascript
 
-(function(d,t) {
-  // var TOKEN = document.getElementById("chatbotToken").value;
-  var TOKEN = ""
+$(document).ready(function(){
+  (function(d,t) {
+    var cfg = document.getElementById("chatwoot-config");
 
-  if (TOKEN != "unset") {
-    // var BASE_URL = document.getElementById("chatbotUrl").value;
-    var BASE_URL = "";
+    if (cfg.getAttribute("data-server").length > 0) {
+      var BASE_URL = cfg.getAttribute("data-server");
+      var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
 
-    var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=BASE_URL+"/packs/js/sdk.js";
+      g.defer = true;
+      g.async = true;
+      s.parentNode.insertBefore(g,s);
 
-    g.src=BASE_URL+"/packs/js/sdk.js";
-    g.defer = true;
-    g.async = true;
-    s.parentNode.insertBefore(g,s);
+      g.onload=function(){
+        window.chatwootSettings = {
+          hideMessageBubble: false,
+          position: cfg.getAttribute("data-position"),
+          locale: document.getElementsByTagName("html")[0].getAttribute("lang"),
+          type: cfg.getAttribute("data-type"),
+          showPopoutButton: true,
+        };
 
-    g.onload=function(){
-      window.chatwootSettings = {
-        hideMessageBubble: false,
-        position: 'left',
-        locale: "en",
-        type: 'expanded_bubble',
-        showPopoutButton: false,
-      };
-
-      window.chatwootSDK.run({
-        websiteToken: TOKEN,
-        baseUrl: BASE_URL
-      })
+        window.chatwootSDK.run({
+          websiteToken: cfg.getAttribute("data-token"),
+          baseUrl: BASE_URL
+        })
+      }
     }
-  }
-})(document,"script");
+  })(document,"script");
+});

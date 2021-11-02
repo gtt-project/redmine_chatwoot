@@ -14,9 +14,8 @@ Redmine::Plugin.register :redmine_chatwoot do
     default: {
       "chatwoot_server" => "",
       "chatwoot_token" => "",
-      "chatwoot_locale" => "en",
-      "chatwoot_type" => "expanded_bubble"
-      "chatwoot_position" => "left"
+      "chatwoot_type" => "expanded_bubble",
+      "chatwoot_position" => "right"
     },
     partial: 'chatwoot/settings'
   )

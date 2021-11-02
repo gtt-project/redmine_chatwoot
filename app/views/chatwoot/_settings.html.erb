@@ -1,20 +1,26 @@
 <p>
   <%= content_tag(:label, l(:field_chatwoot_server)) %>
-  <%= text_field_tag 'settings[chatwoot_server]', @settings['chatwoot_server'], :size => 50 %>
+  <%= text_field_tag 'settings[chatwoot_server]', @settings['chatwoot_server'], :size => 30 %>
 </p>
 <p>
   <%= content_tag(:label, l(:field_chatwoot_token)) %>
-  <%= text_field_tag 'settings[chatwoot_token]', @settings['chatwoot_token'], :size => 50 %>
-</p>
-<p>
-  <%= content_tag(:label, l(:field_chatwoot_locale)) %>
-  <%= text_field_tag 'settings[chatwoot_locale]', @settings['chatwoot_locale'], :size => 2 %>
+  <%= text_field_tag 'settings[chatwoot_token]', @settings['chatwoot_token'], :size => 30 %>
 </p>
 <p>
   <%= content_tag(:label, l(:field_chatwoot_type)) %>
-  <%= text_field_tag 'settings[chatwoot_type]', @settings['chatwoot_type'], :size => 20 %>
+  <%= select_tag "settings[chatwoot_type]",
+    options_for_select([
+      [l(:option_chatwoot_type_standard), 'standard'],
+      [l(:option_chatwoot_type_expanded), 'expanded_bubble']
+    ],
+    @settings['chatwoot_type']) %>
 </p>
 <p>
   <%= content_tag(:label, l(:field_chatwoot_position)) %>
-  <%= text_field_tag 'settings[chatwoot_position]', @settings['chatwoot_position'], :size => 10 %>
+  <%= select_tag "settings[chatwoot_position]",
+    options_for_select([
+      [l(:option_chatwoot_position_left), 'left'],
+      [l(:option_chatwoot_position_right), 'right']
+    ],
+    @settings['chatwoot_position']) %>
 </p>
