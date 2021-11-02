@@ -1,0 +1,20 @@
+<p>
+  <%= content_tag(:label, l(:field_chatwoot_server)) %>
+  <%= text_field_tag 'settings[chatwoot_server]', @settings['chatwoot_server'], :size => 50 %>
+</p>
+<p>
+  <%= content_tag(:label, l(:field_chatwoot_token)) %>
+  <%= text_field_tag 'settings[chatwoot_token]', @settings['chatwoot_token'], :size => 50 %>
+</p>
+<p>
+  <%= content_tag(:label, l(:field_chatwoot_locale)) %>
+  <%= text_field_tag 'settings[chatwoot_locale]', @settings['chatwoot_locale'], :size => 2 %>
+</p>
+<p>
+  <%= content_tag(:label, l(:field_chatwoot_type)) %>
+  <%= text_field_tag 'settings[chatwoot_type]', @settings['chatwoot_type'], :size => 20 %>
+</p>
+<p>
+  <%= content_tag(:label, l(:field_chatwoot_position)) %>
+  <%= text_field_tag 'settings[chatwoot_position]', @settings['chatwoot_position'], :size => 10 %>
+</p>

@@ -1,3 +1,6 @@
-# English strings go here for Rails i18n
 en:
-  # my_label: "My label"
+  chatwoot_server: "Server URL"
+  chatwoot_token: "Widget token"
+  chatwoot_locale: "Language"
+  chatwoot_type: "Widget type"
+  chatwoot_position: "Position"

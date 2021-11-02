@@ -9,4 +9,16 @@ Redmine::Plugin.register :redmine_chatwoot do
   version '1.0.0'
 
   requires_redmine :version_or_higher => '4.0.0'
+
+  settings(
+    default: {
+      "chatwoot_server" => "",
+      "chatwoot_token" => "",
+      "chatwoot_locale" => "en",
+      "chatwoot_type" => "expanded_bubble"
+      "chatwoot_position" => "left"
+    },
+    partial: 'chatwoot/settings'
+  )
+
 end
