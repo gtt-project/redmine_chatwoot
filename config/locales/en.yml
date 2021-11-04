@@ -7,3 +7,5 @@ en:
   field_chatwoot_position: "Position"
   option_chatwoot_position_left: "Left"
   option_chatwoot_position_right: "Right"
+  permission_view_chatwoot: "Show Live Chat"
+  project_module_chatwoot: "Live Chat"
