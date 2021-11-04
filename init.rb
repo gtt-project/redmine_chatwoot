@@ -20,4 +20,8 @@ Redmine::Plugin.register :redmine_chatwoot do
     partial: 'chatwoot/settings'
   )
 
+  project_module :chatwoot do
+    permission :view_chatwoot, {}, :require => :loggedin
+  end
+
 end
