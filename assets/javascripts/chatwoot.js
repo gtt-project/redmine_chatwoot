@@ -19,6 +19,7 @@ $(document).ready(function(){
           position: cfg.getAttribute("data-position"),
           locale: document.getElementsByTagName("html")[0].getAttribute("lang"),
           type: cfg.getAttribute("data-type"),
+          launcherTitle: cfg.getAttribute("data-launcher-title"),
           showPopoutButton: true,
         };
 

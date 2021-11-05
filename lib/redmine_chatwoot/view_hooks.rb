@@ -11,7 +11,8 @@ module RedmineChatwoot
           :server => Setting.plugin_redmine_chatwoot['chatwoot_server'],
           :token => Setting.plugin_redmine_chatwoot['chatwoot_token'],
           :type => Setting.plugin_redmine_chatwoot['chatwoot_type'],
-          :position => Setting.plugin_redmine_chatwoot['chatwoot_position']
+          :position => Setting.plugin_redmine_chatwoot['chatwoot_position'],
+          :launcher_title => l(:chatwoot_launcher_title)
         }, :id => 'chatwoot-config', :style => 'display:none')
         return tags.join("\n")
       end
