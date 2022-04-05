@@ -1,5 +1,3 @@
-require 'redmine_chatwoot/view_hooks'
-
 module RedmineChatwoot
   def self.setup
   end
