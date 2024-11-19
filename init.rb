@@ -1,5 +1,4 @@
-# Global Hooks
-require File.expand_path('../lib/redmine_chatwoot/view_hooks', __FILE__)
+require_relative 'lib/redmine_chatwoot/view_hooks'
 
 Redmine::Plugin.register :redmine_chatwoot do
   name 'Redmine Chatwoot plugin'
@@ -7,9 +6,9 @@ Redmine::Plugin.register :redmine_chatwoot do
   author_url 'https://github.com/georepublic'
   url 'https://github.com/gtt-project/redmine_chatwoot'
   description 'Enables Chatwoot live chat in Redmine deployments'
-  version '1.1.0'
+  version '1.2.0'
 
-  requires_redmine :version_or_higher => '4.0.0'
+  requires_redmine :version_or_higher => '5.0.0'
 
   settings(
     default: {
