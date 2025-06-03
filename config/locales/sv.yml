@@ -1,1 +1,11 @@
-{}
+field_chatwoot_server: Server-URL
+field_chatwoot_token: Widget-token
+field_chatwoot_type: Widgettyp
+option_chatwoot_type_standard: Standard
+option_chatwoot_type_expanded: Expanderad
+field_chatwoot_position: Position
+option_chatwoot_position_left: Vänster
+option_chatwoot_position_right: Höger
+permission_view_chatwoot: Visa livechatt
+project_module_chatwoot: Livechatt
+chatwoot_launcher_title: Chatta med oss
